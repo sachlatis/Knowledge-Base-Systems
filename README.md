@@ -8,5 +8,6 @@ Then this system was uploaded and saved in Virtuoso, a free software able to pro
 Finally, we composed 10 different SPARQL queries in order to show how the system works. Some of these queries were really useful for an everyday application including Manhattan distances from different stations etc. <br/>
  
 <img src="/images/example.png" width="40%" height ="40%">
+
 ## Theory Assignments 
 Answers for the theory assignments of this course! Enjoy!
