@@ -1,0 +1,1354 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.com/"
+     xml:base="http://www.example.com/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.com/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/agency_has_routes -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/agency_has_routes">
+        <owl:inverseOf rdf:resource="http://www.example.com/routes_has_agency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/calendar_has_trips -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/calendar_has_trips">
+        <owl:inverseOf rdf:resource="http://www.example.com/trips_has_calendar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/fares_has_routes -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/fares_has_routes">
+        <owl:inverseOf rdf:resource="http://www.example.com/routes_has_fares"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/oxima_has_routes -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/oxima_has_routes">
+        <owl:inverseOf rdf:resource="http://www.example.com/routes_has_oxima"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/routes_has_agency -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/routes_has_agency">
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.example.com/agency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/routes_has_fares -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/routes_has_fares">
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.example.com/fares"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/routes_has_oxima -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/routes_has_oxima">
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.example.com/oxima"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/routes_has_transit_means -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/routes_has_transit_means">
+        <owl:inverseOf rdf:resource="http://www.example.com/transit_means_has_routes"/>
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.example.com/transit_means"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/routes_has_trips -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/routes_has_trips">
+        <owl:inverseOf rdf:resource="http://www.example.com/trips_has_routes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/stop_times_has_stops -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/stop_times_has_stops">
+        <owl:inverseOf rdf:resource="http://www.example.com/stops_has_stop_times"/>
+        <rdfs:domain rdf:resource="http://www.example.com/stop_times"/>
+        <rdfs:range rdf:resource="http://www.example.com/stops"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/stop_times_has_trips -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/stop_times_has_trips">
+        <owl:inverseOf rdf:resource="http://www.example.com/trips_has_stop_times"/>
+        <rdfs:domain rdf:resource="http://www.example.com/stop_times"/>
+        <rdfs:range rdf:resource="http://www.example.com/trips"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/stops_has_stop_times -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/stops_has_stop_times"/>
+    
+
+
+    <!-- http://www.example.com/transit_means_has_routes -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/transit_means_has_routes"/>
+    
+
+
+    <!-- http://www.example.com/trips_has_calendar -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/trips_has_calendar">
+        <rdfs:domain rdf:resource="http://www.example.com/trips"/>
+        <rdfs:range rdf:resource="http://www.example.com/calendar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/trips_has_routes -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/trips_has_routes">
+        <rdfs:domain rdf:resource="http://www.example.com/trips"/>
+        <rdfs:range rdf:resource="http://www.example.com/routes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/trips_has_stop_times -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/trips_has_stop_times"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/agency_lang -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/agency_lang">
+        <rdfs:domain rdf:resource="http://www.example.com/agency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/agency_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/agency_name">
+        <rdfs:domain rdf:resource="http://www.example.com/agency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/agency_phone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/agency_phone">
+        <rdfs:domain rdf:resource="http://www.example.com/agency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/agency_timezone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/agency_timezone">
+        <rdfs:domain rdf:resource="http://www.example.com/agency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/agency_url -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/agency_url">
+        <rdfs:domain rdf:resource="http://www.example.com/agency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/arrival_time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/arrival_time">
+        <rdfs:domain rdf:resource="http://www.example.com/stop_times"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/block_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/block_id">
+        <rdfs:domain rdf:resource="http://www.example.com/trips"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/currency_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/currency_type">
+        <rdfs:domain rdf:resource="http://www.example.com/fares"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/departure_time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/departure_time">
+        <rdfs:domain rdf:resource="http://www.example.com/stop_times"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/direction_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/direction_id">
+        <rdfs:domain rdf:resource="http://www.example.com/trips"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/drop_off_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/drop_off_type">
+        <rdfs:domain rdf:resource="http://www.example.com/stop_times"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/end_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/end_date">
+        <rdfs:domain rdf:resource="http://www.example.com/calendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/etos_paragogis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/etos_paragogis">
+        <rdfs:domain rdf:resource="http://www.example.com/oxima"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/friday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/friday">
+        <rdfs:domain rdf:resource="http://www.example.com/calendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/location_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/location_type">
+        <rdfs:domain rdf:resource="http://www.example.com/stops"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/metra_url -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/metra_url">
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/monday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/monday">
+        <rdfs:domain rdf:resource="http://www.example.com/calendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/need_for_service -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/need_for_service">
+        <rdfs:domain rdf:resource="http://www.example.com/oxima"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/payment_method -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/payment_method">
+        <rdfs:domain rdf:resource="http://www.example.com/fares"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/pickup_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/pickup_type">
+        <rdfs:domain rdf:resource="http://www.example.com/stop_times"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/price">
+        <rdfs:domain rdf:resource="http://www.example.com/fares"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/route_color -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/route_color">
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/route_desc -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/route_desc">
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/route_long_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/route_long_name">
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/route_short_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/route_short_name">
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/route_text_color -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/route_text_color">
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/route_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/route_type">
+        <rdfs:domain rdf:resource="http://www.example.com/routes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/saturday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/saturday">
+        <rdfs:domain rdf:resource="http://www.example.com/calendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/start_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/start_date">
+        <rdfs:domain rdf:resource="http://www.example.com/calendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/stop_code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/stop_code">
+        <rdfs:domain rdf:resource="http://www.example.com/stops"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/stop_desc -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/stop_desc">
+        <rdfs:domain rdf:resource="http://www.example.com/stops"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/stop_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/stop_name">
+        <rdfs:domain rdf:resource="http://www.example.com/stops"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/stop_point -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/stop_point">
+        <rdfs:domain rdf:resource="http://www.example.com/stops"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/stop_sequence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/stop_sequence">
+        <rdfs:domain rdf:resource="http://www.example.com/stop_times"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/sunday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/sunday">
+        <rdfs:domain rdf:resource="http://www.example.com/calendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/thursday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/thursday">
+        <rdfs:domain rdf:resource="http://www.example.com/calendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/trip_headsign -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/trip_headsign">
+        <rdfs:domain rdf:resource="http://www.example.com/trips"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/tuesday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/tuesday">
+        <rdfs:domain rdf:resource="http://www.example.com/calendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/wednesday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/wednesday">
+        <rdfs:domain rdf:resource="http://www.example.com/calendar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.com/xrwma -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.com/xrwma">
+        <rdfs:domain rdf:resource="http://www.example.com/oxima"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/aeroplano -->
+
+    <owl:Class rdf:about="http://www.example.com/aeroplano">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/means_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/agency -->
+
+    <owl:Class rdf:about="http://www.example.com/agency"/>
+    
+
+
+    <!-- http://www.example.com/agency_for_aeroplano -->
+
+    <owl:Class rdf:about="http://www.example.com/agency_for_aeroplano">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/agency_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/agency_for_astiko_leoforio -->
+
+    <owl:Class rdf:about="http://www.example.com/agency_for_astiko_leoforio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/agency_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/agency_for_ktel -->
+
+    <owl:Class rdf:about="http://www.example.com/agency_for_ktel">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/agency_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/agency_for_long_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/agency_for_long_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/agency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/agency_for_metro -->
+
+    <owl:Class rdf:about="http://www.example.com/agency_for_metro">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/agency_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/agency_for_ploio -->
+
+    <owl:Class rdf:about="http://www.example.com/agency_for_ploio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/agency_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/agency_for_short_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/agency_for_short_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/agency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/agency_for_tram -->
+
+    <owl:Class rdf:about="http://www.example.com/agency_for_tram">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/agency_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/agency_for_treno -->
+
+    <owl:Class rdf:about="http://www.example.com/agency_for_treno">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/agency_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/agency_for_trolley -->
+
+    <owl:Class rdf:about="http://www.example.com/agency_for_trolley">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/agency_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/astiko_leoforio -->
+
+    <owl:Class rdf:about="http://www.example.com/astiko_leoforio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/means_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/calendar -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar"/>
+    
+
+
+    <!-- http://www.example.com/calendar_for_aeroplano -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar_for_aeroplano">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/calendar_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/calendar_for_astiko_leoforio -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar_for_astiko_leoforio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/calendar_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/calendar_for_ktel -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar_for_ktel">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/calendar_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/calendar_for_long_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar_for_long_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/calendar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/calendar_for_metro -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar_for_metro">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/calendar_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/calendar_for_ploio -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar_for_ploio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/calendar_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/calendar_for_short_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar_for_short_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/calendar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/calendar_for_tram -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar_for_tram">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/calendar_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/calendar_for_treno -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar_for_treno">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/calendar_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/calendar_for_trolley -->
+
+    <owl:Class rdf:about="http://www.example.com/calendar_for_trolley">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/calendar_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fare_for_aeroplano -->
+
+    <owl:Class rdf:about="http://www.example.com/fare_for_aeroplano">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/fare_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fare_for_astiko_leoforio -->
+
+    <owl:Class rdf:about="http://www.example.com/fare_for_astiko_leoforio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/fare_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fare_for_ktel -->
+
+    <owl:Class rdf:about="http://www.example.com/fare_for_ktel">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/fare_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fare_for_long_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/fare_for_long_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/fares"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fare_for_metro -->
+
+    <owl:Class rdf:about="http://www.example.com/fare_for_metro">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/fare_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fare_for_ploio -->
+
+    <owl:Class rdf:about="http://www.example.com/fare_for_ploio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/fare_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fare_for_short_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/fare_for_short_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/fares"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fare_for_tram -->
+
+    <owl:Class rdf:about="http://www.example.com/fare_for_tram">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/fare_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fare_for_treno -->
+
+    <owl:Class rdf:about="http://www.example.com/fare_for_treno">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/fare_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fare_for_trolley -->
+
+    <owl:Class rdf:about="http://www.example.com/fare_for_trolley">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/fare_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/fares -->
+
+    <owl:Class rdf:about="http://www.example.com/fares"/>
+    
+
+
+    <!-- http://www.example.com/ktel -->
+
+    <owl:Class rdf:about="http://www.example.com/ktel">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/means_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/long_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/long_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/means_for_long_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/means_for_long_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/transit_means"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/means_for_short_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/means_for_short_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/transit_means"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/metro -->
+
+    <owl:Class rdf:about="http://www.example.com/metro">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/means_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/oxima -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima"/>
+    
+
+
+    <!-- http://www.example.com/oxima_for_aeroplano -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima_for_aeroplano">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/oxima_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/oxima_for_astiko_leoforio -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima_for_astiko_leoforio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/oxima_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/oxima_for_ktel -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima_for_ktel">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/oxima_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/oxima_for_long_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima_for_long_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/oxima"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/oxima_for_metro -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima_for_metro">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/oxima_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/oxima_for_ploio -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima_for_ploio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/oxima_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/oxima_for_short_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima_for_short_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/oxima"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/oxima_for_tram -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima_for_tram">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/oxima_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/oxima_for_treno -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima_for_treno">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/oxima_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/oxima_for_trolley -->
+
+    <owl:Class rdf:about="http://www.example.com/oxima_for_trolley">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/oxima_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ploio -->
+
+    <owl:Class rdf:about="http://www.example.com/ploio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/means_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/routes -->
+
+    <owl:Class rdf:about="http://www.example.com/routes"/>
+    
+
+
+    <!-- http://www.example.com/routes_for_aeroplano -->
+
+    <owl:Class rdf:about="http://www.example.com/routes_for_aeroplano">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/routes_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/routes_for_astiko_leoforio -->
+
+    <owl:Class rdf:about="http://www.example.com/routes_for_astiko_leoforio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/routes_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/routes_for_ktel -->
+
+    <owl:Class rdf:about="http://www.example.com/routes_for_ktel">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/routes_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/routes_for_long_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/routes_for_long_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/routes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/routes_for_metro -->
+
+    <owl:Class rdf:about="http://www.example.com/routes_for_metro">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/routes_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/routes_for_ploio -->
+
+    <owl:Class rdf:about="http://www.example.com/routes_for_ploio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/routes_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/routes_for_short_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/routes_for_short_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/routes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/routes_for_tram -->
+
+    <owl:Class rdf:about="http://www.example.com/routes_for_tram">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/routes_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/routes_for_treno -->
+
+    <owl:Class rdf:about="http://www.example.com/routes_for_treno">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/routes_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/routes_for_trolley -->
+
+    <owl:Class rdf:about="http://www.example.com/routes_for_trolley">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/routes_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/short_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/short_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stop_times -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times"/>
+    
+
+
+    <!-- http://www.example.com/stop_times_for_aeroplano -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times_for_aeroplano">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stop_times_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stop_times_for_astiko_leoforio -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times_for_astiko_leoforio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stop_times_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stop_times_for_ktel -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times_for_ktel">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stop_times_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stop_times_for_long_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times_for_long_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stop_times"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stop_times_for_metro -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times_for_metro">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stop_times_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stop_times_for_ploio -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times_for_ploio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stop_times_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stop_times_for_short_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times_for_short_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stop_times"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stop_times_for_tram -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times_for_tram">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stop_times_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stop_times_for_treno -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times_for_treno">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stop_times_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stop_times_for_trolley -->
+
+    <owl:Class rdf:about="http://www.example.com/stop_times_for_trolley">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stop_times_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stops -->
+
+    <owl:Class rdf:about="http://www.example.com/stops"/>
+    
+
+
+    <!-- http://www.example.com/stops_aeroplano -->
+
+    <owl:Class rdf:about="http://www.example.com/stops_aeroplano">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stops_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stops_for_astiko_leoforio -->
+
+    <owl:Class rdf:about="http://www.example.com/stops_for_astiko_leoforio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stops_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stops_for_long_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/stops_for_long_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stops"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stops_for_metro -->
+
+    <owl:Class rdf:about="http://www.example.com/stops_for_metro">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stops_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stops_for_short_trips -->
+
+    <owl:Class rdf:about="http://www.example.com/stops_for_short_trips">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stops"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stops_for_tram -->
+
+    <owl:Class rdf:about="http://www.example.com/stops_for_tram">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stops_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stops_for_trolley -->
+
+    <owl:Class rdf:about="http://www.example.com/stops_for_trolley">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stops_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stops_ktel -->
+
+    <owl:Class rdf:about="http://www.example.com/stops_ktel">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stops_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stops_ploio -->
+
+    <owl:Class rdf:about="http://www.example.com/stops_ploio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stops_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/stops_treno -->
+
+    <owl:Class rdf:about="http://www.example.com/stops_treno">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/stops_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/tram -->
+
+    <owl:Class rdf:about="http://www.example.com/tram">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/means_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/transit_means -->
+
+    <owl:Class rdf:about="http://www.example.com/transit_means"/>
+    
+
+
+    <!-- http://www.example.com/treno -->
+
+    <owl:Class rdf:about="http://www.example.com/treno">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/means_for_long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/trips -->
+
+    <owl:Class rdf:about="http://www.example.com/trips"/>
+    
+
+
+    <!-- http://www.example.com/trips_for_aeroplano -->
+
+    <owl:Class rdf:about="http://www.example.com/trips_for_aeroplano">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/trips_for_astiko_leoforio -->
+
+    <owl:Class rdf:about="http://www.example.com/trips_for_astiko_leoforio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/trips_for_ktel -->
+
+    <owl:Class rdf:about="http://www.example.com/trips_for_ktel">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/trips_for_metro -->
+
+    <owl:Class rdf:about="http://www.example.com/trips_for_metro">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/trips_for_ploio -->
+
+    <owl:Class rdf:about="http://www.example.com/trips_for_ploio">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/trips_for_tram -->
+
+    <owl:Class rdf:about="http://www.example.com/trips_for_tram">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/trips_for_treno -->
+
+    <owl:Class rdf:about="http://www.example.com/trips_for_treno">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/long_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/trips_for_trolley -->
+
+    <owl:Class rdf:about="http://www.example.com/trips_for_trolley">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/trolley -->
+
+    <owl:Class rdf:about="http://www.example.com/trolley">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/means_for_short_trips"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/ -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
