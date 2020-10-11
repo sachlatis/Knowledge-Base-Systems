@@ -7,7 +7,7 @@ Then, we had to collect the necessary data for the public transit means of Athen
 Then this system was uploaded and saved in Virtuoso, a free software able to process these data. <br/>
 Finally, we composed 10 different SPARQL queries in order to show how the system works. Some of these queries were really useful for an everyday application including Manhattan distances from different stations etc. <br/>
  
-<img src="/images/example.png" width="40%" height ="40%">
+<img src="/images/example.png" width="70%" height ="70%">
 
 ## Theory Assignments 
 Answers for the theory assignments of this course! Enjoy!
